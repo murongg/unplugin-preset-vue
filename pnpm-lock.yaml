@@ -80,7 +80,14 @@ importers:
         version: 5.88.2(esbuild@0.18.20)
 
   playground:
+    dependencies:
+      vue:
+        specifier: ^3.3.4
+        version: 3.3.4
     devDependencies:
+      unplugin-preset-vue:
+        specifier: workspace*
+        version: link:..
       vite:
         specifier: ^4.4.9
         version: 4.4.9(@types/node@20.5.2)

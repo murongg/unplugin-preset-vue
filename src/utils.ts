@@ -1,7 +1,7 @@
 export function isTruly(val: any) {
   if (typeof val === 'boolean')
     return val
-  return false
+  return !!val
 }
 
 export function isUndefined(val: any): val is undefined {

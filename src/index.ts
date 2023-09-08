@@ -3,9 +3,9 @@ import { createUnplugin } from 'unplugin'
 import type { Options } from './types'
 import { createAutoImportPlugin } from './core/auto-import'
 import { isTruly } from './utils'
-import { createVueComponentsPlugin } from './core/vue-components'
 import { createIconsPlugin } from './core/icons'
 import { createVuePlugin } from './core/vue'
+import { createVueComponentsPlugin } from './core/vue-components'
 
 function getPluginOptions<T>(options: T | boolean): NonNullable<T> {
   if (isTruly(options))

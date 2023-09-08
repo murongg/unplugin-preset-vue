@@ -1,4 +1,4 @@
-import Components from 'unplugin-vue-components/index'
+import Components from 'unplugin-vue-components'
 import type { Options } from 'unplugin-vue-components'
 import type { UnpluginContextMeta } from 'unplugin'
 
@@ -11,5 +11,5 @@ const DEFAULT_OPTIONS: Options = {
 }
 
 export function createVueComponentsPlugin(options: Options = DEFAULT_OPTIONS, meta: UnpluginContextMeta) {
-  return Components.raw(options, meta)
+  return ((Components as any).default as typeof Components).raw(Object.assign({}, options, DEFAULT_OPTIONS), meta)
 }

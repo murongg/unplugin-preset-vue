@@ -74,7 +74,7 @@
   ],
   "scripts": {
     "build": "tsup src/*.ts --format cjs,esm --dts --splitting --clean && esno scripts/postbuild.ts",
-    "dev": "tsup src/*.ts --watch src",
+    "dev": "tsup src/*.ts --watch --format cjs,esm src",
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
     "play": "npm -C playground run dev",

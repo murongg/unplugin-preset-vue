@@ -1,9 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nodemon -w '../src/**/*.ts' -e .ts -x vite"
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
   },
   "devDependencies": {
+    "unplugin-preset-vue": "workspace*",
     "vite": "^4.4.9",
     "vite-plugin-inspect": "^0.7.38"
   }
