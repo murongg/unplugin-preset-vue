@@ -2,22 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-preset-vue?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-preset-vue)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
-
-## Template Usage
-
-To use this template, clone it down using:
-
-```bash
-npx degit unplugin/unplugin-preset-vue my-unplugin
-```
-
-And do a global replacement of `unplugin-preset-vue` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+VuePresets template for [unplugin](https://github.com/unjs/unplugin).
 
 ## Install
 
@@ -30,11 +15,11 @@ npm i unplugin-preset-vue
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-preset-vue/vite'
+import VuePresets from 'unplugin-preset-vue/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    VuePresets({ /* options */ }),
   ],
 })
 ```
@@ -48,11 +33,11 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-preset-vue/rollup'
+import VuePresets from 'unplugin-preset-vue/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    VuePresets({ /* options */ }),
   ],
 }
 ```
@@ -113,11 +98,18 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-preset-vue/esbuild'
+import VuePresets from 'unplugin-preset-vue/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [VuePresets()],
 })
 ```
 
 <br></details>
+
+## TODO
+
+- [ ] [unplugin-vue-cssvars](https://github.com/baiwusanyu-c/unplugin-vue-cssvars)
+- [ ] [unplugin-fonts](https://github.com/cssninjaStudio/unplugin-fonts)
+- [ ] [unplugin-imagemin](https://github.com/ErKeLost/unplugin-imagemin)
+- [ ] [unplugin-parcel-css](https://github.com/ssssota/unplugin-parcel-css)
