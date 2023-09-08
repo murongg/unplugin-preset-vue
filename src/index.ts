@@ -5,6 +5,7 @@ import { createAutoImportPlugin } from './core/auto-import'
 import { isTruly } from './utils'
 import { createVueComponentsPlugin } from './core/vue-components'
 import { createIconsPlugin } from './core/icons'
+import { createVuePlugin } from './core/vue'
 
 function getPluginOptions<T>(options: T | boolean): NonNullable<T> {
   if (isTruly(options))
@@ -15,13 +16,18 @@ function getPluginOptions<T>(options: T | boolean): NonNullable<T> {
 
 export const unpluginFactory: UnpluginFactory<Options | undefined> = (options, meta) => {
   const plugins: UnpluginOptions[] = []
-  const { autoImport, vueComponents, icons } = options || {}
+  const { vue, autoImport, vueComponents, icons } = options || {}
 
   function collectionPlugins(options: UnpluginOptions | UnpluginOptions[]) {
     if (Array.isArray(options))
       options.forEach((opt) => { plugins.push(opt) })
     else
       plugins.push(options)
+  }
+
+  if (!isTruly(vue)) {
+    const raw = createVuePlugin(getPluginOptions(vue), meta)
+    collectionPlugins(raw)
   }
 
   if (!isTruly(autoImport)) {

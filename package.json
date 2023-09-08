@@ -115,6 +115,7 @@
     "unplugin": "^1.4.0",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-icons": "^0.17.0",
+    "unplugin-vue": "^4.3.5",
     "unplugin-vue-components": "^0.25.2"
   },
   "devDependencies": {
