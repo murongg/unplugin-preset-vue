@@ -2,6 +2,7 @@
 import AutoImport from 'unplugin-auto-import'
 import type { UnpluginContextMeta } from 'unplugin'
 import type { Options } from 'unplugin-auto-import/types'
+import { getUnpluginDefaultExportsRaw } from '../utils'
 
 const DEFAULT_OPTIONS: Options = {
   imports: [
@@ -12,5 +13,5 @@ const DEFAULT_OPTIONS: Options = {
 }
 
 export function createAutoImportPlugin(options: Options = DEFAULT_OPTIONS, meta: UnpluginContextMeta) {
-  return AutoImport.raw(Object.assign({}, options, DEFAULT_OPTIONS), meta)
+  return getUnpluginDefaultExportsRaw(AutoImport)(Object.assign({}, options, DEFAULT_OPTIONS), meta)
 }
