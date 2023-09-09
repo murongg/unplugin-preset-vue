@@ -2,8 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-preset-vue?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-preset-vue)
 
-VuePresets template for [unplugin](https://github.com/unjs/unplugin).
-
+Integrate useful preset for unplugin vue.
 ## Install
 
 ```bash
@@ -106,10 +105,3 @@ build({
 ```
 
 <br></details>
-
-## TODO
-
-- [ ] [unplugin-vue-cssvars](https://github.com/baiwusanyu-c/unplugin-vue-cssvars)
-- [ ] [unplugin-fonts](https://github.com/cssninjaStudio/unplugin-fonts)
-- [ ] [unplugin-imagemin](https://github.com/ErKeLost/unplugin-imagemin)
-- [ ] [unplugin-parcel-css](https://github.com/ssssota/unplugin-parcel-css)
