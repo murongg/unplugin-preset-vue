@@ -2,7 +2,10 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-preset-vue?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-preset-vue)
 
-Integrate useful preset for unplugin vue.
+This is a preset library for Vue's `unplugin`, which integrates commonly used `unplugin` libraries such as `unplugin-vue`, `unplugin-auto-import`, `unplugin-vue-components`, etc. You can **flexibly enable** a specific plugin based on your needs and maintain compatibility with the original configuration of the plugin.  
+
+Inspire by: [unocss-preset-useful](https://github.com/unpreset/unocss-preset-useful)
+
 ## Install
 
 ```bash
@@ -103,5 +106,60 @@ build({
   plugins: [VuePresets()],
 })
 ```
+
+<br></details>
+
+## Usage
+
+<details>
+<summary> Vue</summary><br>
+
+The documents: [unplugin-vue](https://github.com/unplugin/unplugin-vue)
+
+<br></details>
+
+
+
+<details>
+<summary>Auto Import</summary><br>
+
+Default options:
+```js
+const DEFAULT_OPTIONS = {
+  imports: ['vue'],
+  dts: 'src/auto-imports.d.ts',
+  vueTemplate: true,
+}
+```
+
+The documents: [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
+
+<br></details>
+
+
+<details>
+<summary>Vue Components</summary><br>
+
+Default options:
+```js
+const DEFAULT_OPTIONS = {
+  // allow auto load markdown components under `./src/components/`
+  extensions: ['vue', 'md'],
+  // allow auto import and register components used in markdown
+  include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+  dts: 'src/components.d.ts',
+}
+```
+
+The documents: [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components)
+
+<br></details>
+
+
+
+<details>
+<summary>Icons</summary><br>
+
+The documents: [unplugin-icons](https://github.com/unplugin/unplugin-icons)
 
 <br></details>
